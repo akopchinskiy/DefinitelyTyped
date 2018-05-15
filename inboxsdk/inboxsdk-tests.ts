@@ -1,4 +1,4 @@
-/// <reference path="inboxsdk.d.ts" />
+/// <reference path="index.d.ts" />
 /// <reference path="../es6-promise/es6-promise.d.ts" />
 /// <reference path="../kefir/kefir.d.ts" />
 
