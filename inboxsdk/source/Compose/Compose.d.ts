@@ -121,5 +121,4 @@ declare module 'types-inboxsdk/InboxSDK/Compose' {
 
         // TODO: Events
     }
-
 }

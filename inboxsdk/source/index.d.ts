@@ -8,4 +8,5 @@
  * Copyright (c) 2016 GPC.solutions
  */
 
-// import 'types-inboxsdk/InboxSDK';
+import 'types-inboxsdk/InboxSDK';
+import 'types-inboxsdk/InboxSDK/Compose';

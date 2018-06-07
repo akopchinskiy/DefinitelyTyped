@@ -1,5 +1,6 @@
 /// <reference path="../source/InboxSDK.d.ts" />
 import {Contact} from "types-inboxsdk/InboxSDK";
+import {ComposeButtonDescriptor} from "types-inboxsdk/InboxSDK/Compose";
 
 var expect = require('chai').expect;
 
