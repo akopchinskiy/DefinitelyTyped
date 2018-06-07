@@ -1,7 +1,7 @@
 {
   "module": "types-inboxsdk",
   "name": "types-inboxsdk",
-  "version": "0.2.9",
+  "version": "0.2.92",
   "types" : "source/index.d.ts",
   "main": "source/index.d.ts",
   "contributors": [
