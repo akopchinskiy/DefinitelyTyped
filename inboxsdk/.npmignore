@@ -1,0 +1,5 @@
+.gitignore
+.npmignore
+package-lock.json
+
+/test

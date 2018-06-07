@@ -49,4 +49,6 @@ declare module 'types-inboxsdk/InboxSDK' {
         leftBuffer?: number; //:0
         rightBuffer?: number; //:0
     }
+
+    export const hello = () => 'Hello world!';
 }

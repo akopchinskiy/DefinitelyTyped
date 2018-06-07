@@ -1,0 +1,9 @@
+{
+  "name": "types-inboxsdk",
+  "module": "types-inboxsdk",
+  "main": "index.d.ts",
+  "version": "0.0.1",
+  "dependencies": {
+
+  }
+}
