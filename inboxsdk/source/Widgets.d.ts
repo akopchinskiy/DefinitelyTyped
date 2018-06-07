@@ -1,80 +1,83 @@
-import {ComposeView} from "./Compose";
+declare namespace InboxSDK.Widgets {
 
-export function showModalView(options: ModalOptions): ModalView;
+    import ComposeView = InboxSDK.Compose.ComposeView;
 
-export function showMoleView(options: MoleOptions): MoleView;
+    export function showModalView(options: ModalOptions): ModalView;
 
-export function showDrawerView(options: DrawerOptions): DrawerView;
+    export function showMoleView(options: MoleOptions): MoleView;
 
-export interface ModalOptions {
-    el: HTMLElement;
-    chrome?: boolean; //: true
-    showCloseButton?: boolean; //: false
-    title?: string; //: ''
-    buttons?: ModalButtonDescriptor[]; // []
-}
+    export function showDrawerView(options: DrawerOptions): DrawerView;
 
-export interface ModalButtonDescriptor {
-    text: string;
-    title: string;
-    onClick: () => any; // TODO: check any?
-    type?: string; //: 'SECONDARY_ACTION'
-    orderHint?: number; //: 0
-}
+    export interface ModalOptions {
+        el: HTMLElement;
+        chrome?: boolean; //: true
+        showCloseButton?: boolean; //: false
+        title?: string; //: ''
+        buttons?: ModalButtonDescriptor[]; // []
+    }
 
-export interface MoleOptions {
-    el: HTMLElement;
-    title?: string; //: ''
-    titleEl?: HTMLElement; //: null
-    minimizedTitleEl?: HTMLElement; //: null
-    className?: string; //: ''
-    titleButtons?: MoleButtonDescriptor[]; //: []
-    chrome?: boolean; //: false
-}
+    export interface ModalButtonDescriptor {
+        text: string;
+        title: string;
+        onClick: () => any; // TODO: check any?
+        type?: string; //: 'SECONDARY_ACTION'
+        orderHint?: number; //: 0
+    }
 
-export interface MoleButtonDescriptor {
-    title: string;
-    iconUrl: string;
-    iconClass?: string; //: ''
-    onClick: () => any; // TODO: check any?
-}
+    export interface MoleOptions {
+        el: HTMLElement;
+        title?: string; //: ''
+        titleEl?: HTMLElement; //: null
+        minimizedTitleEl?: HTMLElement; //: null
+        className?: string; //: ''
+        titleButtons?: MoleButtonDescriptor[]; //: []
+        chrome?: boolean; //: false
+    }
 
-export interface DrawerOptions {
-    el: HTMLElement;
-    chrome?: boolean; //: true
-    title?: string; //: ''
-    composeView?: ComposeView; //: null
-    closeWithCompose?: boolean; //: false
-}
+    export interface MoleButtonDescriptor {
+        title: string;
+        iconUrl: string;
+        iconClass?: string; //: ''
+        onClick: () => any; // TODO: check any?
+    }
 
-export interface ModalView {
-    close(): void;
+    export interface DrawerOptions {
+        el: HTMLElement;
+        chrome?: boolean; //: true
+        title?: string; //: ''
+        composeView?: ComposeView; //: null
+        closeWithCompose?: boolean; //: false
+    }
 
-    // TODO: Events
+    export interface ModalView {
+        close(): void;
 
-    destroyed: boolean;
-}
+        // TODO: Events
 
-export interface MoleView {
-    close(): void;
+        destroyed: boolean;
+    }
 
-    setTitle(text: string): void;
+    export interface MoleView {
+        close(): void;
 
-    setMinimized(minimized: boolean): void;
+        setTitle(text: string): void;
 
-    getMinimized(): boolean;
+        setMinimized(minimized: boolean): void;
 
-    // TODO: Events
+        getMinimized(): boolean;
 
-    destroyed: boolean;
-}
+        // TODO: Events
 
-export interface DrawerView {
-    close(): void;
+        destroyed: boolean;
+    }
 
-    associateComposeView(composeView: ComposeView, closeWithCompose: boolean): void;
+    export interface DrawerView {
+        close(): void;
 
-    // TODO: Events
+        associateComposeView(composeView: ComposeView, closeWithCompose: boolean): void;
 
-    destroyed: boolean;
+        // TODO: Events
+
+        destroyed: boolean;
+    }
 }

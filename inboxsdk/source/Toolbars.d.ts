@@ -1,60 +1,62 @@
-import {DropdownView} from "types-inboxsdk/InboxSDK";
-import {RouteView} from "./Router";
-import {KeyboardShortcutHandle} from "./Keyboard";
-import {ThreadRowView} from "./Lists";
-import {ThreadView} from "./Conversations";
+declare namespace InboxSDK.Toolbars {
+    import RouteView = InboxSDK.Router.RouteView;
+    import KeyboardShortcutHandle = InboxSDK.Keyboard.KeyboardShortcutHandle;
+    import ThreadRowView = InboxSDK.Lists.ThreadRowView;
+    import ThreadView = InboxSDK.Conversations.ThreadView;
 
-export function registerToolbarButtonForList(toolbarButtonDescriptor: ToolbarButtonDescriptor): void;
 
-export function registerToolbarButtonForThreadView(toolbarButtonDescriptor: ToolbarButtonDescriptor): void;
+    export function registerToolbarButtonForList(toolbarButtonDescriptor: ToolbarButtonDescriptor): void;
 
-export function addToolbarButtonForApp(appToolbarButtonDescriptor: AppToolbarButtonDescriptor): AppToolbarButtonView;
+    export function registerToolbarButtonForThreadView(toolbarButtonDescriptor: ToolbarButtonDescriptor): void;
 
-export interface ToolbarButtonDescriptor {
-    title: string;
-    iconUrl?: string; //: null
-    iconClass?: string; //: null
-    section: SectionNames;
-    onClick: (event: ToolbarButtonEvent) => void;
-    hasDropdown?: boolean //: false
-    hideFor?: (routeView: RouteView) => void; //: null
-    keyboardShortcutHandle?: KeyboardShortcutHandle; //: null
-}
+    export function addToolbarButtonForApp(appToolbarButtonDescriptor: AppToolbarButtonDescriptor): AppToolbarButtonView;
 
-export interface ToolbarButtonEvent {
-    selectedThreadRowViews: ThreadRowView[];
-    threadRowViews: ThreadRowView[];
-    threadView: ThreadView;
-    dropdown: DropdownView;
-}
+    export interface ToolbarButtonDescriptor {
+        title: string;
+        iconUrl?: string; //: null
+        iconClass?: string; //: null
+        section: SectionNames;
+        onClick: (event: ToolbarButtonEvent) => void;
+        hasDropdown?: boolean //: false
+        hideFor?: (routeView: RouteView) => void; //: null
+        keyboardShortcutHandle?: KeyboardShortcutHandle; //: null
+    }
 
-export interface AppToolbarButtonDescriptor {
-    title: string;
-    titleClass?: string; //: null
-    iconUrl: string;
-    iconClass?: string; //: null
-    onClick: (event: AppToolbarButtonEvent) => void;
-    arrowColor?: string; //: null
-}
+    export interface ToolbarButtonEvent {
+        selectedThreadRowViews: ThreadRowView[];
+        threadRowViews: ThreadRowView[];
+        threadView: ThreadView;
+        dropdown: DropdownView;
+    }
 
-export interface AppToolbarButtonView {
-    open(): void;
+    export interface AppToolbarButtonDescriptor {
+        title: string;
+        titleClass?: string; //: null
+        iconUrl: string;
+        iconClass?: string; //: null
+        onClick: (event: AppToolbarButtonEvent) => void;
+        arrowColor?: string; //: null
+    }
 
-    close(): void;
+    export interface AppToolbarButtonView {
+        open(): void;
 
-    remove(): void;
+        close(): void;
 
-    //TODO: Events
+        remove(): void;
 
-    destroyed: boolean;
-}
+        //TODO: Events
 
-export interface AppToolbarButtonEvent {
-    dropdown: DropdownView;
-}
+        destroyed: boolean;
+    }
 
-export enum SectionNames {
-    INBOX_STATE,
-    METADATA_STATE,
-    OTHER
+    export interface AppToolbarButtonEvent {
+        dropdown: DropdownView;
+    }
+
+    export enum SectionNames {
+        INBOX_STATE,
+        METADATA_STATE,
+        OTHER
+    }
 }

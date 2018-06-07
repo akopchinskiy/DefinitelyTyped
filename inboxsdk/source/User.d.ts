@@ -1,6 +1,7 @@
-import {Contact} from "types-inboxsdk/InboxSDK";
+declare namespace InboxSDK.User {
 
-export function getEmailAddress(): string;
+    export function getEmailAddress(): string;
 
-export function getAccountSwitcherContactList(): Contact[];
+    export function getAccountSwitcherContactList(): Contact[];
 
+}

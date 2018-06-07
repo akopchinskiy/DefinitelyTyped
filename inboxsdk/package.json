@@ -1,8 +1,9 @@
 {
   "module": "types-inboxsdk",
   "name": "types-inboxsdk",
-  "version": "0.2.7",
-  "main": "source/InboxSDK.d.ts",
+  "version": "0.2.9",
+  "types" : "source/index.d.ts",
+  "main": "source/index.d.ts",
   "contributors": [
     {
       "name": "Raphaël Doursenaud",
