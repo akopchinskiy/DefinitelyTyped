@@ -1,7 +1,4 @@
-declare module 'InboxSDK/Router' {
-    import {DropdownView} from "InboxSDK";
-    import {LabelDescriptor} from "InboxSDK/Lists";
-
+declare module 'types-inboxsdk/InboxSDK/Router' {
     export function createLink(routeID: string, params: Object): string;
 
     export function goto(routeID: string, params: Object): void;

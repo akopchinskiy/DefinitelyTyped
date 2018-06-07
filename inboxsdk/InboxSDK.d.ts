@@ -1,4 +1,4 @@
-declare module 'InboxSDK' {
+declare module 'types-inboxsdk/InboxSDK' {
     export function load(version: string, appId?: string, opts?: LoadOptions): Promise<any>;
 
     export function loadScript(url: string): Promise<void>;

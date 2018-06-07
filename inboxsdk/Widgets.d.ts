@@ -1,5 +1,5 @@
-declare module 'InboxSDK/Widgets' {
-    import {ComposeView} from "InboxSDK/Compose";
+declare module 'types-inboxsdk/InboxSDK/Widgets' {
+    import {ComposeView} from "types-inboxsdk/InboxSDK/Compose";
 
     export function showModalView(options: ModalOptions): ModalView;
 

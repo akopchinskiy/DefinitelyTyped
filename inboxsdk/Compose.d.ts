@@ -1,5 +1,5 @@
-declare module 'InboxSDK/Compose' {
-    import {Contact, DropdownView} from 'InboxSDK';
+declare module 'types-inboxsdk/InboxSDK/Compose' {
+    import {Contact, DropdownView} from 'types-inboxsdk/InboxSDK';
 
     export function registerComposeViewHandler(handler: (composeView: ComposeView) => Function): Function;
 

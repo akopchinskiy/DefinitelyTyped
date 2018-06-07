@@ -1,4 +1,4 @@
-declare module 'InboxSDK/Search' {
+declare module 'types-inboxsdk/InboxSDK/Search' {
     export function registerSearchSuggestionsProvider(handler: (query: string) => AutocompleteSearchResult[]): void;
     export function registerSearchSuggestionsProvider(handler: (query: string) => Promise<AutocompleteSearchResult[]>): void;
 

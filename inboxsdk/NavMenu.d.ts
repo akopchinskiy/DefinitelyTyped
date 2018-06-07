@@ -1,5 +1,5 @@
-declare module 'InboxSDK/NavMenu' {
-    import {DropdownView} from "InboxSDK";
+declare module 'types-inboxsdk/InboxSDK/NavMenu' {
+    import {DropdownView} from "types-inboxsdk/InboxSDK";
 
     export function addNavItem(navItemDescriptor: NavItemDescriptor): NavItemView;
 

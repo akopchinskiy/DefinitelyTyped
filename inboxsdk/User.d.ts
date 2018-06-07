@@ -1,5 +1,5 @@
-declare module 'InboxSDK/User' {
-    import {Contact} from "InboxSDK";
+declare module 'types-inboxsdk/InboxSDK/User' {
+    import {Contact} from "types-inboxsdk/InboxSDK";
 
     export function getEmailAddress(): string;
 

@@ -1,9 +1,9 @@
-declare module 'InboxSDK/Toolbars' {
-    import {ThreadRowView} from "InboxSDK/Lists";
-    import {ThreadView} from "InboxSDK/Conversations";
-    import {RouteView} from "InboxSDK/Router";
-    import {KeyboardShortcutHandle} from "InboxSDK/Keyboard";
-    import {DropdownView} from "InboxSDK";
+declare module 'types-inboxsdk/InboxSDK/Toolbars' {
+    import {RouteView} from "types-inboxsdk/InboxSDK/Router";
+    import {KeyboardShortcutHandle} from "types-inboxsdk/InboxSDK/Keyboard";
+    import {ThreadRowView} from "types-inboxsdk/InboxSDK/Lists";
+    import {ThreadView} from "types-inboxsdk/InboxSDK/Conversations";
+    import {DropdownView} from "types-inboxsdk/InboxSDK";
 
     export function registerToolbarButtonForList(toolbarButtonDescriptor: ToolbarButtonDescriptor): void;
 

@@ -1,4 +1,4 @@
-declare module 'InboxSDK/ButterBar' {
+declare module 'types-inboxsdk/InboxSDK/ButterBar' {
     export function showMessage(options: MessageDescriptor): Object;
 
     export function showLoading(): Object;

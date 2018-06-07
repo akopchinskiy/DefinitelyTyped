@@ -1,4 +1,4 @@
-declare module 'InboxSDK/Keyboard' {
+declare module 'types-inboxsdk/InboxSDK/Keyboard' {
     export function createShortcutHandle(keyboardShortcutDescriptor: KeyboardShortcutDescriptor): KeyboardShortcutHandle;
 
 

@@ -1,5 +1,5 @@
-declare module 'InboxSDK/Lists' {
-    import {Contact, DropdownView} from 'InboxSDK';
+declare module 'types-inboxsdk/InboxSDK/Lists' {
+    import {Contact, DropdownView} from 'types-inboxsdk/InboxSDK';
 
     export function registerThreadRowViewHandler(handler: (threadRowView: ThreadRowView) => any): void; // TODO: check any?
 

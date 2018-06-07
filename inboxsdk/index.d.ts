@@ -7,16 +7,3 @@
 /*
  * Copyright (c) 2016 GPC.solutions
  */
-
-import './InboxSDK';
-import './ButterBar';
-import './Compose';
-import './Conversations';
-import './Keyboard';
-import './Lists';
-import './NavMenu';
-import './Router';
-import './Search';
-import './Toolbars';
-import './User';
-import './Widgets';

@@ -1,5 +1,5 @@
-declare module 'InboxSDK/Conversations' {
-    import {Contact} from "InboxSDK";
+declare module 'types-inboxsdk/InboxSDK/Conversations' {
+    import {Contact} from 'types-inboxsdk/InboxSDK';
 
     export function registerThreadViewHandler(handler: (threadView: ThreadView) => void): void;
 
