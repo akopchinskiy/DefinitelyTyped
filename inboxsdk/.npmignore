@@ -1,5 +1,8 @@
 .gitignore
 .npmignore
+package.json
 package-lock.json
+tsconfig.json
+jsdoc2md.json
 
 /test
