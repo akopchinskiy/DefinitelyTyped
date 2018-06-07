@@ -1,118 +1,116 @@
-declare module 'types-inboxsdk/InboxSDK/Lists' {
-    import {Contact, DropdownView} from 'types-inboxsdk/InboxSDK';
+import {Contact, DropdownView} from 'types-inboxsdk/InboxSDK';
 
-    export function registerThreadRowViewHandler(handler: (threadRowView: ThreadRowView) => any): void; // TODO: check any?
+export function registerThreadRowViewHandler(handler: (threadRowView: ThreadRowView) => any): void; // TODO: check any?
 
-    export interface ThreadRowView {
-        addLabel(labelDescriptor: LabelDescriptor): void;
+export interface ThreadRowView {
+    addLabel(labelDescriptor: LabelDescriptor): void;
 
-        //addLabel(labelDescriptor: Stream<LabelDescriptor>): void;
+    //addLabel(labelDescriptor: Stream<LabelDescriptor>): void;
 
-        addImage(imageDescriptor: ImageDescriptor): void;
+    addImage(imageDescriptor: ImageDescriptor): void;
 
-        //addImage(imageDescriptor: Stream<ImageDescriptor>): void;
+    //addImage(imageDescriptor: Stream<ImageDescriptor>): void;
 
-        addButton(buttonDescriptor: ThreadRowButtonDescriptor): void;
+    addButton(buttonDescriptor: ThreadRowButtonDescriptor): void;
 
-        //addButton(buttonDescriptor: Stream<ThreadRowButtonDescriptor>): void;
+    //addButton(buttonDescriptor: Stream<ThreadRowButtonDescriptor>): void;
 
-        addActionButton(buttonDescriptor: ThreadRowActionButtonDescriptor): void;
+    addActionButton(buttonDescriptor: ThreadRowActionButtonDescriptor): void;
 
-        //addActionButton(buttonDescriptor: Stream<ThreadRowActionButtonDescriptor>): void;
+    //addActionButton(buttonDescriptor: Stream<ThreadRowActionButtonDescriptor>): void;
 
-        addAttachmentIcon(threadRowAttachmentIconDescriptor: ThreadRowAttachmentIconDescriptor): void
+    addAttachmentIcon(threadRowAttachmentIconDescriptor: ThreadRowAttachmentIconDescriptor): void
 
-        //addAttachmentIcon(threadRowAttachmentIconDescriptor: stream<ThreadRowAttachmentIconDescriptor>): void
+    //addAttachmentIcon(threadRowAttachmentIconDescriptor: stream<ThreadRowAttachmentIconDescriptor>): void
 
-        replaceDate(threadRowDateDescriptor: ThreadRowDateDescriptor): void;
+    replaceDate(threadRowDateDescriptor: ThreadRowDateDescriptor): void;
 
-        //replaceDate(threadRowDateDescriptor: Stream<ThreadRowDateDescriptor>): void;
+    //replaceDate(threadRowDateDescriptor: Stream<ThreadRowDateDescriptor>): void;
 
-        replaceDraftLabel(draftLabelDescriptor: ThreadRowDraftLabelDescriptor): void;
+    replaceDraftLabel(draftLabelDescriptor: ThreadRowDraftLabelDescriptor): void;
 
-        //replaceDraftLabel(draftLabelDescriptor: Stream<ThreadRowDraftLabelDescriptor>): void;
+    //replaceDraftLabel(draftLabelDescriptor: Stream<ThreadRowDraftLabelDescriptor>): void;
 
-        getSubject(): string;
+    getSubject(): string;
 
-        getDateString(): string;
+    getDateString(): string;
 
-        /**@deprecated*/
-        getThreadID(): string;
+    /**@deprecated*/
+    getThreadID(): string;
 
-        getThreadIDAsync(): Promise<string>;
+    getThreadIDAsync(): Promise<string>;
 
-        getThreadIDIfStable(): string;
+    getThreadIDIfStable(): string;
 
-        getDraftID(): Promise<string>;
+    getDraftID(): Promise<string>;
 
-        getVisibleDraftCount(): number;
+    getVisibleDraftCount(): number;
 
-        getVisibleMessageCount(): number;
+    getVisibleMessageCount(): number;
 
-        getContacts(): Contact[];
+    getContacts(): Contact[];
 
-        // TODO: Events
+    // TODO: Events
 
-        destroyed: boolean;
-    }
+    destroyed: boolean;
+}
 
-    export interface ThreadRowButtonDescriptor {
-        iconUrl: string;
-        iconClass?: string; //: ''
-        onClick: (event: ThreadRowButtonClickEvent) => void;
-        hasDropdown?: boolean; //: false
-    }
+export interface ThreadRowButtonDescriptor {
+    iconUrl: string;
+    iconClass?: string; //: ''
+    onClick: (event: ThreadRowButtonClickEvent) => void;
+    hasDropdown?: boolean; //: false
+}
 
-    export interface ThreadRowButtonClickEvent {
-        threadRowView: ThreadRowView;
-        dropdown: DropdownView;
-    }
+export interface ThreadRowButtonClickEvent {
+    threadRowView: ThreadRowView;
+    dropdown: DropdownView;
+}
 
-    export interface ThreadRowActionButtonDescriptor {
-        type: ActionButtonTypes;
-        title: string;
-        className?: string; //: ''
-        onClick?: (event: ThreadRowActionButtonClickEvent) => void;
-        url: string;
-    }
+export interface ThreadRowActionButtonDescriptor {
+    type: ActionButtonTypes;
+    title: string;
+    className?: string; //: ''
+    onClick?: (event: ThreadRowActionButtonClickEvent) => void;
+    url: string;
+}
 
-    export interface ThreadRowActionButtonClickEvent {
-        // FIXME: testme, undocummented
-    }
+export interface ThreadRowActionButtonClickEvent {
+    // FIXME: testme, undocummented
+}
 
-    export interface LabelDescriptor {
-        title: string;
-        foregroundColor?: string; //: ''
-        backgroundColor?: string; //: ''
-        iconUrl: string;
-        iconClass?: string; //: ''
-    }
+export interface LabelDescriptor {
+    title: string;
+    foregroundColor?: string; //: ''
+    backgroundColor?: string; //: ''
+    iconUrl: string;
+    iconClass?: string; //: ''
+}
 
-    export interface ImageDescriptor {
-        imageUrl: string;
-        imageClass?: string; //: null
-        tooltip?: string; //: null
-        orderHint?: number; //: 0
-    }
+export interface ImageDescriptor {
+    imageUrl: string;
+    imageClass?: string; //: null
+    tooltip?: string; //: null
+    orderHint?: number; //: 0
+}
 
-    export interface ThreadRowDateDescriptor {
-        text: string;
-        textColor?: string; //: ''
-        tooltip?: string; //: ''
-    }
+export interface ThreadRowDateDescriptor {
+    text: string;
+    textColor?: string; //: ''
+    tooltip?: string; //: ''
+}
 
-    export interface ThreadRowAttachmentIconDescriptor {
-        iconUrl?: string; //: ''
-        iconClass?: string; //: ''
-        tooltip?: string; //: ''
-    }
+export interface ThreadRowAttachmentIconDescriptor {
+    iconUrl?: string; //: ''
+    iconClass?: string; //: ''
+    tooltip?: string; //: ''
+}
 
-    export interface ThreadRowDraftLabelDescriptor {
-        text: string;
-        count?: string; //: 1
-    }
+export interface ThreadRowDraftLabelDescriptor {
+    text: string;
+    count?: string; //: 1
+}
 
-    export enum ActionButtonTypes {
-        LINK
-    }
+export enum ActionButtonTypes {
+    LINK
 }

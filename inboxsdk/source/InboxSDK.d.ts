@@ -1,3 +1,13 @@
+// Type definitions for InboxSDK
+// Project: https://www.inboxsdk.com/
+// Definitions by: Raphaël Doursenaud <rdoursenaud@gpcsolutions.fr>
+// And also by: Artem Kopchinskiy <a.kopchinskiy@apollo4u.net>
+// Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
+
+/*
+ * Copyright (c) 2016 GPC.solutions
+ */
+
 declare module 'types-inboxsdk/InboxSDK' {
     export function load(version: string, appId?: string, opts?: LoadOptions): Promise<any>;
 

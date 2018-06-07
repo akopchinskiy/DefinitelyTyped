@@ -1,13 +1,10 @@
-declare module 'types-inboxsdk/InboxSDK/Keyboard' {
-    export function createShortcutHandle(keyboardShortcutDescriptor: KeyboardShortcutDescriptor): KeyboardShortcutHandle;
+export function createShortcutHandle(keyboardShortcutDescriptor: KeyboardShortcutDescriptor): KeyboardShortcutHandle;
 
+export interface KeyboardShortcutHandle {
+    remove(): void;
+}
 
-    export interface KeyboardShortcutHandle {
-        remove(): void;
-    }
-
-    export interface KeyboardShortcutDescriptor {
-        chord: string;
-        description: string;
-    }
+export interface KeyboardShortcutDescriptor {
+    chord: string;
+    description: string;
 }
