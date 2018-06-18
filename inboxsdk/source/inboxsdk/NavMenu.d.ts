@@ -1,4 +1,4 @@
-import {DropdownView} from "./main";
+import {DropdownView} from "./index";
 
 export function addNavItem(navItemDescriptor: NavItemDescriptor): NavItemView;
 

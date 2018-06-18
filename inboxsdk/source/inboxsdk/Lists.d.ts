@@ -1,4 +1,4 @@
-import {Contact, DropdownView} from "./main";
+import {Contact, DropdownView} from "./index";
 
 export function registerThreadRowViewHandler(handler: (threadRowView: ThreadRowView) => any): void; // TODO: check any?
 

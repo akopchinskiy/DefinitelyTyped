@@ -1,5 +1,5 @@
-import {DropdownView} from "./main";
 import {LabelDescriptor} from "./Lists";
+import {DropdownView} from "./index";
 
 export function createLink(routeID: string, params: Object): string;
 

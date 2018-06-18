@@ -1,8 +1,8 @@
-import {DropdownView} from "./main";
 import {RouteView} from "./Router";
 import {KeyboardShortcutHandle} from "./Keyboard";
 import {ThreadRowView} from "./Lists";
 import {ThreadView} from "./Conversations";
+import {DropdownView} from "./index";
 
 
 export function registerToolbarButtonForList(toolbarButtonDescriptor: ToolbarButtonDescriptor): void;

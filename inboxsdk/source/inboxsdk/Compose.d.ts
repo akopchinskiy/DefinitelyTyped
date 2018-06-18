@@ -1,4 +1,4 @@
-import {Contact, DropdownView} from "./main";
+import {Contact, DropdownView} from "./index";
 
 export function registerComposeViewHandler(handler: (composeView: ComposeView) => Function): Function;
 

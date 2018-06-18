@@ -1,4 +1,4 @@
-import {Contact} from "./main";
+import {Contact} from "./index";
 
 export function registerThreadViewHandler(handler: (threadView: ThreadView) => void): void;
 
